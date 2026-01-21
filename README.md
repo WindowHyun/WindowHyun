@@ -4,9 +4,6 @@
 
 ### Tools✌️ <br>
 <img src="https://img.shields.io/badge/VScode-5C2D91?style=flat-square&logo=visualstudio&logoColor=white"/> <img src="https://img.shields.io/badge/Pycharm-000000?style=flat-square&logo=pycharm&logoColor=white"/>
-
-### Blog <br>
-<a>Tistory : [https://kr-ych0321.tistory.com/]</a>
 <!--
 **OHTARU/OHTARU** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
