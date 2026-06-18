@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="[https://WindowHyun.github.io](https://windowhyun.github.io/OHTARU/)">
+  <a href="[https://windowhyun.github.io/WindowHyun/](https://windowhyun.github.io/OHTARU/)">
     <img src="https://img.shields.io/badge/Portfolio-포트폴리오_보러가기-4ade80?style=for-the-badge&logo=github&logoColor=white" alt="Portfolio" />
   </a>
   <a href="mailto:dusckd4948@naver.com">
@@ -51,7 +51,7 @@ IT와 생산성을 좋아하는 **QA 엔지니어**입니다.
 | **Amuze** 🏆 | 무용인을 위한 커뮤니티 앱 | 백엔드 · QA | [GitHub](https://github.com/WindowHyun/Amuze-Beta) |
 | **QA 자격증 공부 사이트** ⚡ | AI로 기획~배포까지 1인 풀사이클 개발 | 기획·디자인·개발·QA·배포 | [Live](https://istqb-flax.vercel.app/) · [GitHub](https://github.com/WindowHyun/ISTQB) |
 
-> 더 자세한 내용은 👉 **[포트폴리오 사이트](https://WindowHyun.github.io)** 에서 확인하실 수 있어요.
+> 더 자세한 내용은 👉 **[포트폴리오 사이트](https://windowhyun.github.io/WindowHyun/)** 에서 확인하실 수 있어요.
 
 <br/>
 
@@ -74,4 +74,4 @@ IT와 생산성을 좋아하는 **QA 엔지니어**입니다.
 ## 📫 Contact
 
 - 📧 **Email** — dusckd4948@naver.com
-- 🌐 **Portfolio** — https://WindowHyun.github.io
+- 🌐 **Portfolio** https://windowhyun.github.io/WindowHyun/
