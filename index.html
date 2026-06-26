@@ -11,6 +11,7 @@
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 <style>
   :root{
+    /* ---- dark (default) ---- */
     --bg:#0a0e14;
     --bg-soft:#0e131b;
     --surface:#121821;
@@ -24,11 +25,60 @@
     --accent-dim:#143021;
     --accent-line:#1e5236;
     --warn:#fbbf24;
+    --nav-bg:rgba(10,14,20,.72);
+    --glow1:rgba(74,222,128,.08);
+    --glow2:rgba(56,140,90,.06);
+    --glow-card:rgba(74,222,128,.07);
+    color-scheme:dark;
     --radius:14px;
     --maxw:1080px;
     --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
     --display:'Space Grotesk','Pretendard',sans-serif;
     --body:'Pretendard','Space Grotesk',sans-serif;
+  }
+
+  /* ---- light / white mode ---- */
+  html[data-theme="light"]{
+    --bg:#f6f8fb;
+    --bg-soft:#eef1f6;
+    --surface:#ffffff;
+    --surface-2:#f1f4f9;
+    --border:#e1e6ee;
+    --border-soft:#edf0f5;
+    --text:#161d28;
+    --muted:#566072;
+    --muted-2:#8a94a5;
+    --accent:#16a34a;
+    --accent-dim:#e6f7ee;
+    --accent-line:#b8e6cb;
+    --warn:#b45309;
+    --nav-bg:rgba(246,248,251,.82);
+    --glow1:rgba(22,163,74,.07);
+    --glow2:rgba(22,163,74,.05);
+    --glow-card:rgba(22,163,74,.06);
+    color-scheme:light;
+  }
+
+  /* ---- developer mode · Tokyo Night ---- */
+  html[data-theme="dev"]{
+    --bg:#1a1b26;
+    --bg-soft:#16161e;
+    --surface:#1f2335;
+    --surface-2:#292e42;
+    --border:#3b4261;
+    --border-soft:#2a2e42;
+    --text:#c0caf5;
+    --muted:#a9b1d6;
+    --muted-2:#565f89;
+    --accent:#7aa2f7;
+    --accent-dim:#1f2742;
+    --accent-line:#34548a;
+    --warn:#e0af68;
+    --nav-bg:rgba(26,27,38,.72);
+    --glow1:rgba(122,162,247,.10);
+    --glow2:rgba(187,154,247,.07);
+    --glow-card:rgba(122,162,247,.08);
+    color-scheme:dark;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -37,9 +87,10 @@
     font-family:var(--body);line-height:1.65;
     -webkit-font-smoothing:antialiased;
     background-image:
-      radial-gradient(620px 320px at 85% -8%, rgba(74,222,128,.08), transparent 70%),
-      radial-gradient(520px 300px at 0% 8%, rgba(56,140,90,.06), transparent 70%);
+      radial-gradient(620px 320px at 85% -8%, var(--glow1), transparent 70%),
+      radial-gradient(520px 300px at 0% 8%, var(--glow2), transparent 70%);
     background-attachment:fixed;
+    transition:background-color .25s ease,color .25s ease;
   }
   a{color:inherit;text-decoration:none}
   ::selection{background:rgba(74,222,128,.25);color:#fff}
@@ -49,7 +100,7 @@
   nav{
     position:sticky;top:0;z-index:50;
     backdrop-filter:blur(12px);
-    background:rgba(10,14,20,.72);
+    background:var(--nav-bg);
     border-bottom:1px solid var(--border-soft);
   }
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:62px}
@@ -69,6 +120,11 @@
   }
   .nav-gh:hover{border-color:var(--accent-line)}
   .menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text);width:40px;height:38px;border-radius:9px;cursor:pointer;font-size:1.1rem}
+  .nav-right{display:flex;align-items:center;gap:10px}
+  .theme-toggle{display:inline-flex;gap:2px;border:1px solid var(--border);background:var(--surface);border-radius:10px;padding:3px}
+  .tt-btn{font-family:var(--mono);font-size:.84rem;line-height:1;background:none;border:0;color:var(--muted);cursor:pointer;padding:6px 9px;border-radius:7px;transition:.16s}
+  .tt-btn:hover{color:var(--text)}
+  .tt-btn.active{background:var(--accent-dim);color:var(--accent)}
 
   /* ---------- hero ---------- */
   header{padding:74px 0 64px}
@@ -120,8 +176,8 @@
   .badge{
     position:absolute;left:14px;bottom:14px;z-index:2;
     display:inline-flex;align-items:center;gap:8px;
-    font-family:var(--mono);font-size:.78rem;color:var(--text);
-    background:rgba(10,14,20,.78);border:1px solid var(--border);
+    font-family:var(--mono);font-size:.78rem;color:#e6edf3;
+    background:rgba(10,14,20,.78);border:1px solid rgba(255,255,255,.14);
     padding:7px 12px;border-radius:999px;backdrop-filter:blur(6px);
   }
   .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent)}
@@ -129,16 +185,16 @@
     border:1px solid var(--border);border-radius:14px;overflow:hidden;background:#0b1017;
     font-family:var(--mono);font-size:.8rem;
   }
-  .term-bar{display:flex;align-items:center;gap:7px;padding:10px 13px;background:var(--surface-2);border-bottom:1px solid var(--border-soft)}
+  .term-bar{display:flex;align-items:center;gap:7px;padding:10px 13px;background:#161d28;border-bottom:1px solid #19202b}
   .term-bar i{width:11px;height:11px;border-radius:50%;display:inline-block}
   .term-bar .r{background:#ff5f56}.term-bar .y{background:#ffbd2e}.term-bar .g{background:#27c93f}
-  .term-bar span{margin-left:8px;color:var(--muted-2);font-size:.74rem}
+  .term-bar span{margin-left:8px;color:#5f6b7a;font-size:.74rem}
   .term-body{padding:14px 15px;min-height:138px}
-  .term-body .ln{white-space:pre;margin:0;line-height:1.85;color:var(--muted)}
-  .term-body .cmd{color:var(--text)}
+  .term-body .ln{white-space:pre;margin:0;line-height:1.85;color:#8b97a7}
+  .term-body .cmd{color:#e6edf3}
   .term-body .cmd .pr{color:var(--accent)}
   .term-body .pass{color:var(--accent)}
-  .term-body .ok{color:var(--text)}
+  .term-body .ok{color:#e6edf3}
   .cursor{display:inline-block;width:8px;height:15px;background:var(--accent);vertical-align:-2px;animation:blink 1.05s steps(1) infinite}
   @keyframes blink{50%{opacity:0}}
 
@@ -188,7 +244,7 @@
     display:flex;flex-direction:column;border:1px solid var(--border);background:var(--surface);
     border-radius:var(--radius);padding:24px;transition:.22s;position:relative;overflow:hidden;
   }
-  .proj::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px 160px at 100% 0,rgba(74,222,128,.07),transparent 60%);opacity:0;transition:.25s}
+  .proj::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px 160px at 100% 0,var(--glow-card),transparent 60%);opacity:0;transition:.25s}
   .proj:hover{transform:translateY(-3px);border-color:var(--accent-line)}
   .proj:hover::before{opacity:1}
   .proj-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:6px}
@@ -196,6 +252,7 @@
   .proj .award{font-family:var(--mono);font-size:.72rem;color:var(--warn);white-space:nowrap}
   .proj .sub{font-family:var(--mono);font-size:.78rem;color:var(--accent);margin:0 0 12px}
   .proj p.desc{color:var(--muted);font-size:.92rem;margin:0 0 16px;flex:1}
+  .proj p.desc code{font-family:var(--mono);font-size:.85em;background:var(--surface-2);border:1px solid var(--border-soft);padding:1px 5px;border-radius:5px;color:var(--text)}
   .proj .tags{margin-bottom:18px}
   .proj-links{display:flex;gap:8px;flex-wrap:wrap}
   .plink{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:.78rem;color:var(--text);border:1px solid var(--border);background:var(--surface-2);padding:8px 13px;border-radius:9px;transition:.18s}
@@ -300,6 +357,10 @@
     html{scroll-behavior:auto}
   }
 </style>
+<script>
+  // apply saved theme before paint to avoid a flash
+  (function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dev')t='dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();
+</script>
 </head>
 <body>
 
@@ -317,7 +378,14 @@
         GitHub
       </a>
     </div>
-    <button class="menu-btn" id="menuBtn" aria-label="메뉴">☰</button>
+    <div class="nav-right">
+      <div class="theme-toggle" role="group" aria-label="테마 선택">
+        <button class="tt-btn" data-theme-val="dark" type="button" title="다크 모드" aria-label="다크 모드">🌙</button>
+        <button class="tt-btn" data-theme-val="light" type="button" title="화이트 모드" aria-label="화이트 모드">☀️</button>
+        <button class="tt-btn" data-theme-val="dev" type="button" title="개발자 모드 · Tokyo Night" aria-label="개발자 모드">&lt;/&gt;</button>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="메뉴">☰</button>
+    </div>
   </div>
 </nav>
 
@@ -337,7 +405,7 @@
         </div>
         <div class="stats">
           <span class="chip">QA 경력 <b>1년+</b></span>
-          <span class="chip">프로젝트 <b>4+</b></span>
+          <span class="chip">프로젝트 <b>6+</b></span>
           <span class="chip">자격증 <b>6</b></span>
           <span class="chip">수료증 <b>9</b></span>
         </div>
@@ -509,6 +577,32 @@
           </div>
         </div>
 
+        <div class="proj proj-ai rv">
+          <div class="proj-top"><h3>blackBoxTesting MCP</h3><span class="ai-badge">🔌 MCP</span></div>
+          <p class="sub">자연어 UI 테스트 MCP 서버 · 개인 프로젝트</p>
+          <p class="desc">AI 에이전트(Claude 등)가 <b>자연어로 웹 UI를 자동 테스트</b>하는 MCP 서버. 통과율·단계별 스크린샷·실패 원인·회귀·접근성 점검과 자격증명 마스킹을 담은 QA 리포트(HTML/MD/JSON)를 자동 생성합니다. 비개발자도 코드 없이 테스트할 수 있도록 설계했습니다.</p>
+          <div class="tags">
+            <span class="tag key">MCP</span><span class="tag">Python</span><span class="tag">AI Agent</span><span class="tag">A11y</span><span class="tag">QA Report</span>
+          </div>
+          <a class="proj-addr" href="https://github.com/WindowHyun/blackBoxTesting-MCP" target="_blank" rel="noopener">github.com/WindowHyun/blackBoxTesting-MCP ↗</a>
+          <div class="proj-links">
+            <a class="plink" href="https://github.com/WindowHyun/blackBoxTesting-MCP" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a>
+          </div>
+        </div>
+
+        <div class="proj proj-ai rv">
+          <div class="proj-top"><h3>Claude Code Skills</h3><span class="ai-badge">⚡ AI Built</span></div>
+          <p class="sub">역설계 문서화 스킬 · 개인 프로젝트</p>
+          <p class="desc">완성된 프론트엔드 코드에서 <b>기획 문서를 역으로 복원</b>하는 Claude Code 스킬 모음. <code>reverse-spec</code>은 동작 정책 명세(SPEC)를, <code>reverse-prd</code>는 "무엇을·왜 만들었는지"의 PRD를 정적 분석으로 생성해 PDF·DOCX·HTML로 출력합니다.</p>
+          <div class="tags">
+            <span class="tag key">Claude Code</span><span class="tag">Skill</span><span class="tag">Static Analysis</span><span class="tag">PRD</span><span class="tag">SPEC</span>
+          </div>
+          <a class="proj-addr" href="https://github.com/WindowHyun/Skills" target="_blank" rel="noopener">github.com/WindowHyun/Skills ↗</a>
+          <div class="proj-links">
+            <a class="plink" href="https://github.com/WindowHyun/Skills" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -614,6 +708,25 @@
 <script>
   // year
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // theme toggle (dark / light / dev · Tokyo Night)
+  (function(){
+    var root = document.documentElement;
+    var btns = document.querySelectorAll('.tt-btn');
+    function sync(t){
+      btns.forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-theme-val') === t); });
+    }
+    function apply(t){
+      if(t!=='light' && t!=='dev') t='dark';
+      root.setAttribute('data-theme', t);
+      try{ localStorage.setItem('theme', t); }catch(e){}
+      sync(t);
+    }
+    sync(root.getAttribute('data-theme') || 'dark');
+    btns.forEach(function(b){
+      b.addEventListener('click', function(){ apply(b.getAttribute('data-theme-val')); });
+    });
+  })();
 
   // mobile menu
   var mb = document.getElementById('menuBtn'), nl = document.getElementById('navlinks');
