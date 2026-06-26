@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="[https://windowhyun.github.io/WindowHyun/]">
+  <a href="https://windowhyun.github.io/WindowHyun/">
     <img src="https://img.shields.io/badge/Portfolio-포트폴리오_보러가기-4ade80?style=for-the-badge&logo=github&logoColor=white" alt="Portfolio" />
   </a>
   <a href="mailto:dusckd4948@naver.com">
