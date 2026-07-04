@@ -21,6 +21,7 @@ IT와 생산성을 좋아하는 **QA 엔지니어**입니다.
 
 - 🧪 명세 기반 시나리오 중심 **TC 설계** & 정밀 **리그레션 테스트**
 - 🤖 **Playwright · MCP** 자동화로 반복 검증 효율화
+- 🧩 **Claude Code 스킬 · MCP 서버** 직접 제작 — UI 테스트 자동화, 문서 역설계 등 QA·PM 생산성 도구화
 - 🤝 기획·개발·디자인 사이에서 이슈 우선순위를 정리하고 **병목을 없애는 QA**
 
 <br/>
@@ -50,6 +51,15 @@ IT와 생산성을 좋아하는 **QA 엔지니어**입니다.
 | **Roomy** | 자취생을 위한 커뮤니티 앱 | 백엔드 · QA | [GitHub](https://github.com/Roomy2024/Roomy-Backend/tree/main) |
 | **Amuze** 🏆 | 무용인을 위한 커뮤니티 앱 | 백엔드 · QA | [GitHub](https://github.com/WindowHyun/Amuze-Beta) |
 | **QA 자격증 공부 사이트** ⚡ | AI로 기획~배포까지 1인 풀사이클 개발 | 기획·디자인·개발·QA·배포 | [Live](https://istqb-flax.vercel.app/) · [GitHub](https://github.com/WindowHyun/ISTQB) |
+
+### 🤖 AI 도구 · Claude Code 스킬
+
+| 프로젝트 | 한 줄 소개 | 링크 |
+|---|---|---|
+| **blackBoxTesting MCP** 🔌 | 자연어로 웹 UI를 자동 테스트하고 QA 리포트를 생성하는 MCP 서버 | [GitHub](https://github.com/WindowHyun/blackBoxTesting-MCP) |
+| **Reverse Spec & PRD** ⚡ | 프론트엔드 코드를 정적 분석해 SPEC·PRD 문서를 역설계 | [GitHub](https://github.com/WindowHyun/Reverse_Spec_and_PRD) |
+| **Reverse Backend Skill** ⚡ | 백엔드 코드에서 API 문서·보안 정책 리포트를 역설계 | [GitHub](https://github.com/WindowHyun/reverse-backend-skill) |
+| **PM Case Study Skill** ⚡ | 6단계 방법론으로 PM 케이스 스터디·포트폴리오 문서를 자동 생성 | [GitHub](https://github.com/WindowHyun/pm-case-study.skill) |
 
 > 더 자세한 내용은 👉 **[포트폴리오 사이트](https://windowhyun.github.io/WindowHyun/)** 에서 확인하실 수 있어요.
 
