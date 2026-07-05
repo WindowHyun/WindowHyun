@@ -21,14 +21,14 @@
     --text:#e6edf3;
     --muted:#8b97a7;
     --muted-2:#5f6b7a;
-    --accent:#4ade80;
-    --accent-dim:#143021;
-    --accent-line:#1e5236;
+    --accent:#8577f7;
+    --accent-dim:#1e1c33;
+    --accent-line:#3c3670;
     --warn:#fbbf24;
     --nav-bg:rgba(10,14,20,.72);
-    --glow1:rgba(74,222,128,.08);
-    --glow2:rgba(56,140,90,.06);
-    --glow-card:rgba(74,222,128,.07);
+    --glow1:rgba(133,119,247,.10);
+    --glow2:rgba(107,92,220,.07);
+    --glow-card:rgba(133,119,247,.08);
     color-scheme:dark;
     --radius:14px;
     --maxw:1080px;
@@ -48,14 +48,14 @@
     --text:#161d28;
     --muted:#566072;
     --muted-2:#8a94a5;
-    --accent:#16a34a;
-    --accent-dim:#e6f7ee;
-    --accent-line:#b8e6cb;
-    --warn:#b45309;
+    --accent:#6a4ee0;
+    --accent-dim:#efecfd;
+    --accent-line:#d6cef8;
+    --warn:#9a6b00;
     --nav-bg:rgba(246,248,251,.82);
-    --glow1:rgba(22,163,74,.07);
-    --glow2:rgba(22,163,74,.05);
-    --glow-card:rgba(22,163,74,.06);
+    --glow1:rgba(106,78,224,.07);
+    --glow2:rgba(106,78,224,.05);
+    --glow-card:rgba(106,78,224,.06);
     color-scheme:light;
   }
 
@@ -93,7 +93,7 @@
     transition:background-color .25s ease,color .25s ease;
   }
   a{color:inherit;text-decoration:none}
-  ::selection{background:rgba(74,222,128,.25);color:#fff}
+  ::selection{background:rgba(133,119,247,.28);color:#fff}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 
   /* ---------- nav ---------- */
@@ -137,7 +137,7 @@
     padding:6px 12px;border-radius:999px;margin-bottom:22px;
   }
   .eyebrow .pulse{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2.4s ease-in-out infinite}
-  @keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(74,222,128,.5)}50%{opacity:.6;box-shadow:0 0 0 5px rgba(74,222,128,0)}}
+  @keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(133,119,247,.5)}50%{opacity:.6;box-shadow:0 0 0 5px rgba(133,119,247,0)}}
   h1{
     font-family:var(--display);font-weight:700;
     font-size:clamp(2.6rem,7vw,4.3rem);line-height:1.02;letter-spacing:-.02em;
@@ -153,8 +153,8 @@
     font-family:var(--mono);font-size:.86rem;font-weight:500;
     padding:12px 18px;border-radius:10px;cursor:pointer;transition:.18s;border:1px solid transparent;
   }
-  .btn-primary{background:var(--accent);color:#06210f}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px -8px rgba(74,222,128,.55)}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px -8px rgba(133,119,247,.5)}
   .btn-ghost{border-color:var(--border);color:var(--text);background:var(--surface)}
   .btn-ghost:hover{border-color:var(--accent-line);color:var(--accent)}
   .stats{display:flex;gap:10px;flex-wrap:wrap}
@@ -239,6 +239,7 @@
   ul.bul li b{color:var(--text);font-weight:600}
 
   /* projects */
+  .proj-sub{font-family:var(--mono);font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:0 0 14px}
   .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
   .proj{
     display:flex;flex-direction:column;border:1px solid var(--border);background:var(--surface);
@@ -293,7 +294,7 @@
   footer .f b{color:var(--accent)}
 
   /* AI feature project */
-  .ai-badge{font-family:var(--mono);font-size:.7rem;font-weight:600;color:#06210f;background:linear-gradient(135deg,#86efac,var(--accent));padding:4px 9px;border-radius:7px;white-space:nowrap;box-shadow:0 0 16px -3px rgba(74,222,128,.6)}
+  .ai-badge{font-family:var(--mono);font-size:.7rem;font-weight:600;color:#fff;background:linear-gradient(135deg,#b3a4fb,var(--accent));padding:4px 9px;border-radius:7px;white-space:nowrap;box-shadow:0 0 16px -3px rgba(133,119,247,.55)}
   .proj-ai{border-color:var(--accent-line)}
   .proj-ai::after{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);pointer-events:none}
   .pipeline{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:0 0 16px}
@@ -515,6 +516,7 @@
   <section id="projects">
     <div class="wrap">
       <div class="sec-head rv"><span class="sec-num">04</span><h2 class="sec-title">프로젝트</h2><span class="sec-line"></span></div>
+      <p class="proj-sub rv">팀 프로젝트</p>
       <div class="proj-grid">
 
         <div class="proj rv">
@@ -576,6 +578,10 @@
             <a class="plink" href="https://github.com/WindowHyun/ISTQB" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a>
           </div>
         </div>
+
+      </div>
+      <p class="proj-sub rv" style="margin-top:36px">직접 만든 도구</p>
+      <div class="proj-grid">
 
         <div class="proj proj-ai rv">
           <div class="proj-top"><h3>blackBoxTesting MCP</h3><span class="ai-badge">🔌 MCP</span></div>
