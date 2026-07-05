@@ -1,4 +1,4 @@
-<h1 align="center">👋 안녕하세요, QA 엔지니어 연창현입니다</h1>
+<h1 align="center">👋 안녕하세요,QA 엔지니어 연창현입니다</h1>
 
 <p align="center">
   <em>버그를 찾는 사람이 아니라, <b>신뢰를 만드는 사람</b></em>
