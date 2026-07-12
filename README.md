@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://windowhyun.github.io/WindowHyun/">
-    <img src="https://img.shields.io/badge/Portfolio-포트폴리오_보러가기-4ade80?style=for-the-badge&logo=github&logoColor=white" alt="Portfolio" />
+    <img src="https://img.shields.io/badge/Portfolio-포트폴리오_보러가기-8577f7?style=for-the-badge&logo=github&logoColor=white" alt="Portfolio" />
   </a>
   <a href="mailto:dusckd4948@naver.com">
     <img src="https://img.shields.io/badge/Email-dusckd4948@naver.com-1f2733?style=for-the-badge&logo=naver&logoColor=2DB400" alt="Email" />
@@ -29,7 +29,7 @@ IT와 생산성을 좋아하는 **QA 엔지니어**입니다.
 ## 🛠 Tech & Tools
 
 ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
-![MCP](https://img.shields.io/badge/MCP-4ade80?style=flat-square&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-8577f7?style=flat-square&logoColor=white)
 ![Appium](https://img.shields.io/badge/Appium-662D91?style=flat-square&logo=appium&logoColor=white)
 ![Jira](https://img.shields.io/badge/Jira-0052CC?style=flat-square&logo=jira&logoColor=white)
 ![TestRail](https://img.shields.io/badge/TestRail-65C179?style=flat-square&logoColor=white)
@@ -75,8 +75,8 @@ IT와 생산성을 좋아하는 **QA 엔지니어**입니다.
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=WindowHyun&show_icons=true&hide_border=true&theme=github_dark&icon_color=4ade80&title_color=4ade80" alt="GitHub Stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=WindowHyun&layout=compact&hide_border=true&theme=github_dark&title_color=4ade80" alt="Top Languages" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=WindowHyun&show_icons=true&hide_border=true&theme=github_dark&icon_color=8577f7&title_color=8577f7" alt="GitHub Stats" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=WindowHyun&layout=compact&hide_border=true&theme=github_dark&title_color=8577f7" alt="Top Languages" />
 </p>
 
 <br/>
