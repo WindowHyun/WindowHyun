@@ -52,6 +52,13 @@ IT와 생산성을 좋아하는 **QA 엔지니어**입니다.
 | **Amuze** 🏆 | 무용인을 위한 커뮤니티 앱 | 백엔드 · QA | [GitHub](https://github.com/WindowHyun/Amuze-Beta) |
 | **QA 자격증 공부 사이트** ⚡ | AI로 기획~배포까지 1인 풀사이클 개발 | 기획·디자인·개발·QA·배포 | [Live](https://istqb-flax.vercel.app/) · [GitHub](https://github.com/WindowHyun/ISTQB) |
 
+### 🏢 기업참여 프로젝트
+
+| 프로젝트 | 한 줄 소개 | 역할 | 링크 |
+|---|---|---|---|
+| **미래내일 일경험 – 기획** | 개인 간 선물 모금으로 원하는 선물 구매를 돕는 사이트 기획 및 아이디어 구축 | 팀원 · 기획 | – |
+| **미래내일 일경험 – 기획·개발** 🏆 | 시각·청각 장애인을 위한 STT·TTS·OCR 접근성 앱(SendMan) 기획·개발 | 팀장 · 기획·개발 | [GitHub](https://github.com/WindowHyun/Sendman_AI/tree/YCH) |
+
 ### 🤖 AI 도구 · Claude Code 스킬
 
 | 프로젝트 | 한 줄 소개 | 링크 |
